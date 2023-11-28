@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_23_072601) do
     t.string "Book_title"
     t.string "Book_id"
     t.string "Student_class"
-    t.date "Date"
+    t.string "Date"
     t.time "Time"
     t.string "Librarian_name"
     t.string "Librarian_phone_number"

@@ -5,7 +5,7 @@ class CreateBooks < ActiveRecord::Migration[7.0]
       t.string :Book_title
       t.string :Book_id
       t.string :Student_class
-      t.date :Date
+      t.string :Date
       t.time :Time
       t.string :Librarian_name
       t.string :Librarian_phone_number
