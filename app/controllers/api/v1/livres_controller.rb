@@ -19,7 +19,7 @@ class Api::V1::LivresController < ApplicationController
     livre = Livre.new(
       name: livre_params[:name],
       image: livre_params[:image],
-      title: livre_params[:author],
+      author: livre_params[:author],
     )
     if livre.save
       render json: livre, status: 200
@@ -36,7 +36,7 @@ class Api::V1::LivresController < ApplicationController
       livre.update(
       name: params[:name],
       image: params[:image],
-      title: params[:author],
+      author: params[:author],
       )
 
       render json: 'Book Record Updated Successfully'
