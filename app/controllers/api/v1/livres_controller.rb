@@ -21,6 +21,7 @@ class Api::V1::LivresController < ApplicationController
       image: livre_params[:image],
       author: livre_params[:author],
     )
+  
     if livre.save
       render json: livre, status: 200
     else
@@ -56,8 +57,16 @@ class Api::V1::LivresController < ApplicationController
   end
 
   private
+  # def livre_params
+  #   params.require(:livre).permit([
+  #     :name,
+  #     :image,
+  #     :author,
+  #   ])
+  # end
+
   def livre_params
-    params.require(:livre).permit([
+    params.permit([
       :name,
       :image,
       :author,
